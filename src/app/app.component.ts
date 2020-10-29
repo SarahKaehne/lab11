@@ -32,6 +32,19 @@ export class AppComponent {
   public pieChartLegend = true;
   public pieChartPlugins = [];
 
+  colors: any[] = [{ 
+    backgroundColor: [
+      'silver',
+      'lightsteelblue',
+      'lightblue',
+      'lightskyblue',
+      'cornflowerblue',
+      'steelblue',
+      'darkblue',
+      'rackley',
+    ]
+  }];
+
   ngOnInit() {
     this.listen2NewConnet();
     this.listen2NewVote();
