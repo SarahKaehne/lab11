@@ -32,6 +32,17 @@ export class AppComponent {
   public pieChartLegend = true;
   public pieChartPlugins = [];
 
+  public barChartOptions: ChartOptions = {
+    responsive: true,
+  };
+
+  public barChartLabels: Label[] = [];
+  public barChartData: SingleDataSet = [];
+  public barChartType: ChartType = 'bar';
+  public barChartLegend = true;
+  public barChartPlugins = [];
+
+
   colors: any[] = [{ 
     backgroundColor: [
       'silver',
@@ -77,6 +88,8 @@ export class AppComponent {
       arr.push(data.options[num].text)
     }
     this.pieChartLabels =  arr;
+    this.barChartLabels =  arr;
+    
   }
   
   setDate(data){
@@ -86,6 +99,7 @@ export class AppComponent {
   }
 
   this.pieChartData = arr;
+  this.barChartData = arr;
   }
 
 }
